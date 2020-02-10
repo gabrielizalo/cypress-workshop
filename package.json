@@ -4,8 +4,9 @@
   "description": "This is a Workshop about Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run",
-    "lint": "tslint --project cypress/tsconfig.json cypress/**/*.ts"
+    "lint": "tslint --project cypress/tsconfig.json cypress/**/*.ts",
+    "open": "cypress open",
+    "test": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -25,11 +26,11 @@
   "homepage": "https://github.com/gabrielizalo/cypress-workshop#readme",
   "dependencies": {
     "@cypress/webpack-preprocessor": "^4.1.1",
-    "cypress": "^4.0.0",
     "ts-loader": "^6.2.1",
     "webpack": "^4.41.5"
   },
   "devDependencies": {
+    "cypress": "^4.0.1",
     "tslint": "^6.0.0",
     "tslint-config-airbnb": "^5.11.2",
     "typescript": "^3.7.5"

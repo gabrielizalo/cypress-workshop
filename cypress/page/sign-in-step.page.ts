@@ -1,7 +1,7 @@
 export class SignInStepPage {
-  private signInSelector: string;
-  private emailTextBoxSelector: string;
-  private passwordTextBoxSelector: string;
+  private readonly signInSelector: string;
+  private readonly emailTextBoxSelector: string;
+  private readonly passwordTextBoxSelector: string;
 
   constructor() {
     this.signInSelector = '#SubmitLogin';

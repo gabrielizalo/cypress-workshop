@@ -1,11 +1,13 @@
 export class AddressStepPage {
-  private proceedToCheckoutSelector: string;
+  private readonly proceedToCheckoutButtonSelector: string;
+  private readonly proceedToCheckoutButtonText: string;
 
   constructor() {
-    this.proceedToCheckoutSelector = '#center_column > form > p > button';
+    this.proceedToCheckoutButtonSelector = '.cart_navigation';
+    this.proceedToCheckoutButtonText = 'Proceed to checkout';
   }
 
-  public proceedToCheckoutClick() {
-    cy.get(this.proceedToCheckoutSelector).click();
+  public proceedToCheckoutButtonClick() {
+    cy.get(this.proceedToCheckoutButtonSelector).contains(this.proceedToCheckoutButtonText).click();
   }
 }

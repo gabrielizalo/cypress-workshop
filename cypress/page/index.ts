@@ -1,0 +1,9 @@
+export { AddressStepPage } from './address-step.page';
+export { HomePage } from './home.page';
+export { MenuContentPage } from './menu-content.page';
+export { OrderSummaryStepPage } from './order-summary-step.page';
+export { PaymentStepPage } from './payment-step.page';
+export { ProductAddedModalPage } from './product-added-modal.page';
+export { ProductListPage } from './product-list.page';
+export { ShippingStepPage } from './shipping-step-page';
+export { SignInStepPage } from './sign-in-step.page';

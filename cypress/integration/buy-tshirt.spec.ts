@@ -21,7 +21,8 @@ describe('Given an user', () => {
         before(() => {
           const productListPage: ProductListPage = new ProductListPage();
 
-          productListPage.addToCartClick();
+          // productListPage.addToCartClick();
+          productListPage.addToCartProduct('Faded Short Sleeve T-shirts');
         });
 
         describe('And proceed to the buying', () => {

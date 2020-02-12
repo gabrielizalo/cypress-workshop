@@ -1,11 +1,13 @@
 export class MenuContentPage {
-  private tShirtMenuSelector: string;
+  private readonly mainMenuItemsSelector: string;
+  private readonly mainMenuItemTShirtsText: string;
 
   constructor() {
-    this.tShirtMenuSelector = '#block_top_menu > ul > li:nth-child(3) > a';
+    this.mainMenuItemsSelector = '.sf-menu > li > a';
+    this.mainMenuItemTShirtsText = 'T-shirts';
   }
 
-  public tShirtMenuClick() {
-    cy.get(this.tShirtMenuSelector).click();
+  public mainMenuItemTShirtClick() {
+    cy.get(this.mainMenuItemsSelector).contains(this.mainMenuItemTShirtsText).click();
   }
 }

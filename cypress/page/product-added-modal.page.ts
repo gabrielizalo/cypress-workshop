@@ -1,11 +1,13 @@
 export class ProductAddedModalPage {
-  private proceedToCheckoutSelector: string;
+  private readonly proceedToCheckoutButtonSelector: string;
+  private readonly proceedToCheckoutButtonText: string;
 
   constructor() {
-    this.proceedToCheckoutSelector = '#layer_cart > div.clearfix > div.layer_cart_cart.col-xs-12.col-md-6 > div.button-container > a';
+    this.proceedToCheckoutButtonSelector = '.layer_cart_cart';
+    this.proceedToCheckoutButtonText = 'Proceed to checkout';
   }
 
-  public proceedToCheckoutClick() {
-    cy.get(this.proceedToCheckoutSelector).click();
+  public proceedToCheckoutButtonClick() {
+    cy.get(this.proceedToCheckoutButtonSelector).contains(this.proceedToCheckoutButtonText).click();
   }
 }

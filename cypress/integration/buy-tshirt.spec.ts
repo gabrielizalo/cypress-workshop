@@ -1,4 +1,3 @@
-// tslint:disable-next-line:max-line-length
 import { AddressStepPage, HomePage, MenuContentPage, PaymentStepPage, ProductAddedModalPage,
          ProductListPage, OrderSummaryStepPage, ShippingStepPage, SignInStepPage } from '../page';
 
@@ -18,12 +17,12 @@ describe('Buy a t-shirt', () => {
     homePage.visit();
 
     // Navigation in the products
-    menuContentPage.tShirtMenuClick();
+    menuContentPage.mainMenuItemTShirtClick();
     productListPage.addToCartClick();
-    productAddedModalPage.proceedToCheckoutClick();
+    productAddedModalPage.proceedToCheckoutButtonClick();
 
     // Begin buying
-    orderSummaryPage.proceedToCheckoutClick();
+    orderSummaryPage.proceedToCheckoutButtonClick();
 
     // Sign in
     signInPage.emailTextBoxFill('aperdomobo@gmail.com');
@@ -31,7 +30,7 @@ describe('Buy a t-shirt', () => {
     signInPage.signInClick();
 
     // Continue process
-    addressStepPage.proceedToCheckoutClick();
+    addressStepPage.proceedToCheckoutButtonClick();
 
     // Shipping address
     shippingPage.iAgreeTheTermsCheck();

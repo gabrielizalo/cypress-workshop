@@ -1,12 +1,14 @@
 export class PaymentStepPage {
-  private iConfirmMyOrderSelector: string;
-  private payByBankWireSelector: string;
+  private readonly iConfirmMyOrderSelector: string;
+  private readonly payByBankWireSelector: string;
+  private readonly payByBankWireText: string;
   private readonly yourOrderIsCompleteSelector: string;
 
   constructor() {
     this.iConfirmMyOrderSelector = '#cart_navigation > button';
-    this.payByBankWireSelector = '#HOOK_PAYMENT > div:nth-child(1) > div > p > a';
-    this.yourOrderIsCompleteSelector = '#center_column > div > p > strong';
+    this.payByBankWireSelector = '.payment_module';
+    this.payByBankWireText = 'Pay by bank wire';
+    this.yourOrderIsCompleteSelector = '.cheque-indent > strong';
   }
 
   public iConfirmMyOrderClick() {
@@ -14,7 +16,7 @@ export class PaymentStepPage {
   }
 
   public payByBankWireClick() {
-    cy.get(this.payByBankWireSelector).click();
+    cy.get(this.payByBankWireSelector).contains(this.payByBankWireText).click();
   }
 
   public yourOrderIsCompleteObj() {

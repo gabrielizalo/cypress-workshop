@@ -1,14 +1,16 @@
 export class ShippingStepPage {
-  private iAgreeTheTermsSelector: string;
-  private proceedToCheckoutSelector: string;
+  private readonly iAgreeTheTermsSelector: string;
+  private readonly proceedToCheckoutButtonSelector: string;
+  private readonly proceedToCheckoutButtonText: string;
 
   constructor() {
     this.iAgreeTheTermsSelector = '#cgv';
-    this.proceedToCheckoutSelector = '#form > p > button';
+    this.proceedToCheckoutButtonSelector = '#form';
+    this.proceedToCheckoutButtonText = 'Proceed to checkout';
   }
 
   public proceedToCheckoutClick() {
-    cy.get(this.proceedToCheckoutSelector).click();
+    cy.get(this.proceedToCheckoutButtonSelector).contains(this.proceedToCheckoutButtonText).click();
   }
 
   public iAgreeTheTermsCheck() {
